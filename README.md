@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-[ Click here to watch the walkthrough](https://i.imgur.com/l7T13fi.gif)
+[Click here to watch the walkthrough](https://i.imgur.com/l7T13fi.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScrenToGif...  
