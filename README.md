@@ -51,7 +51,8 @@ GIF created with ScrenToGif...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One challenge was filtering the search results to only show relevant anime titles.
+Another was managing API data delays and avoiding blank or repeated entries.
 
 ## License
 
