@@ -40,9 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<a href="https://i.imgur.com/l7T13fi.gif">
-  <img src="https://i.imgur.com/l7T13fi.gif" title="Video Walkthrough" alt="Video Walkthrough" width="600" />
-</a>
+[ Click here to watch the walkthrough](https://i.imgur.com/l7T13fi.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScrenToGif...  
