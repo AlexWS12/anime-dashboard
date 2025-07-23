@@ -1,9 +1,9 @@
+/* Base Styles */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #dceefb, #ffffff);
-  color: #222;
+  background: linear-gradient(to right, #dbeafe, #f8fafc);
+  color: #1e293b;
 }
 
 .app-container {
@@ -12,6 +12,7 @@ body {
   margin: 0 auto;
 }
 
+/* Search & Filters */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -21,45 +22,331 @@ body {
 
 .search-bar {
   flex: 1;
-  padding: 0.5rem;
+  min-width: 250px;
+  padding: 0.75rem;
   font-size: 1rem;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  background: white;
 }
 
-.filter-menu label {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: 500;
+.filter-select {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  font-size: 1rem;
 }
 
-.stats li {
-  margin-bottom: 0.4rem;
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.game-grid {
+.stats-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Charts Section */
+.charts-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.chart-toggles {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.chart-toggles button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-toggles button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.chart-container {
+  height: 350px;
+  margin-top: 1rem;
+}
+
+/* Anime Grid */
+.anime-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.game-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
+.anime-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s;
 }
 
-.game-card:hover {
-  transform: scale(1.02);
+.anime-card:hover {
+  transform: translateY(-4px);
 }
 
-.game-card img {
+.anime-card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.anime-card h3 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.anime-card p {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.anime-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Detail View */
+.anime-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.anime-info-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.anime-poster {
+  flex: 0 0 300px;
+}
+
+.anime-poster img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.anime-meta {
+  flex: 1;
+}
+
+.anime-meta h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.meta-item {
+  background: #f8fafc;
+  padding: 1rem;
   border-radius: 8px;
 }
 
-.old-price {
-  color: #888;
+.meta-label {
+  display: block;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.meta-value {
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.synopsis {
+  margin-top: 1.5rem;
+}
+
+.synopsis h3 {
+  margin-bottom: 0.5rem;
+}
+
+.synopsis p {
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Utility Classes */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-style: italic;
+  grid-column: 1 / -1;
+}
+/* Chart Selector */
+.chart-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.chart-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.chart-button:hover {
+  background: #cbd5e1;
+}
+
+.chart-button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Chart Display */
+.chart-display {
+  height: 400px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive Charts */
+@media (max-width: 768px) {
+  .chart-selector {
+    justify-content: center;
+  }
+  
+  .chart-display {
+    height: 300px;
+  }
+}
+/* Toggle Button */
+.toggle-charts-btn {
+  display: block;
+  width: 150px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.toggle-charts-btn:hover {
+  background: #2563eb;
+}
+
+/* Chart Selector */
+.chart-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chart-btn {
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Chart Container */
+.chart-container {
+  height: 400px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
 }
