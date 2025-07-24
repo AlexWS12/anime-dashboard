@@ -36,8 +36,6 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
 [Click here to watch demo video](https://i.imgur.com/hFqXVrV.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
