@@ -41,19 +41,20 @@ Here's a walkthrough of implemented user stories:
 [Click here to watch demo video](https://i.imgur.com/hFqXVrV.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ScreenToGif...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
+One challenge I encountered was working with the external API. Some of the data fields were inconsistent or missing, which required extra checks and fallback values in the code to avoid crashes. Another issue was handling asynchronous API calls while keeping the UI responsive and avoiding excessive re-renders.
 
-Describe any challenges encountered while building the app.
+Styling the dashboard to be both clean and responsive also took time, especially when adjusting the layout for different screen sizes. Finally, implementing charts that told a meaningful story required experimenting with different data groupings and visualizations to find what was most useful.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2025 Alex Waisman
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
