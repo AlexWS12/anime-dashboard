@@ -4,7 +4,7 @@ Submitted by: **Alex Waisman**
 
 This web app: **An interactive dashboard for discovering anime, featuring detailed views, statistics, and data visualizations powered by the Jikan API**
 
-Time spent: **20** hours spent in total
+Time spent: **12** hours spent in total
 
 ## Required Features
 
